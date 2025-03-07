@@ -1,4 +1,5 @@
 {
+  "private": true,
   "scripts": {
     "build": "turbo run build",
     "dev": "rm -rf packages/core/dist && turbo run dev --filter=demo",
@@ -13,8 +14,7 @@
     "test": "turbo run test",
     "version": "lerna version --force-publish -y --no-push --no-changelog --no-git-tag-version $npm_package_version",
     "version:auto": "yarn version --no-git-tag-version --new-version $1",
-    "changelog": "node scripts/create-changelog",
-    "prepare": "npm run build"
+    "changelog": "node scripts/create-changelog"
   },
   "devDependencies": {
     "@turbo/gen": "^2.3.3",
